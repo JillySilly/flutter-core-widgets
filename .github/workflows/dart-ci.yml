@@ -1,0 +1,65 @@
+name: Flutter Mobile Engine Pipeline
+
+on:
+  schedule:
+    # Wakes up at 33 minutes past 2 AM, 8 AM, 2 PM, and 8 PM UTC
+    # (10:33 AM, 4:33 PM, 10:33 PM, and 4:33 AM Singapore Time)
+    - cron: '33 2,8,14,20 * * *'
+  workflow_dispatch:
+
+jobs:
+  dart-sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Fetch Core Repository
+        uses: actions/checkout@v4
+
+      - name: Mutate Dart Model Spec
+        run: |
+          # 30% chance to skip (maintains natural execution gaps)
+          if [ $((RANDOM % 100)) -lt 30 ]; then
+            echo "Flutter models current. Skipping execution."
+            exit 0
+          fi
+
+          mkdir -p lib/models
+          TARGET_FILE="lib/models/app_state.dart"
+
+          if [ ! -f "$TARGET_FILE" ]; then
+            echo "import 'package:flutter/foundation.dart';" > "$TARGET_FILE"
+            echo "" >> "$TARGET_FILE"
+            echo "// Core Flutter Application State Models" >> "$TARGET_FILE"
+          fi
+
+          COMPONENTS=("NavigationState" "ThemePayload" "UserSession" "MetricTile" "WidgetConfig")
+          PICKED_COMP=${COMPONENTS[$RANDOM % ${#COMPONENTS[@]}]}
+
+          echo "" >> "$TARGET_FILE"
+          echo "/// State node representation $RANDOM" >> "$TARGET_FILE"
+          echo "@immutable" >> "$TARGET_FILE"
+          echo "class ${PICKED_COMP}_$RANDOM {" >> "$TARGET_FILE"
+          echo "  final int id;" >> "$TARGET_FILE"
+          echo "  final bool isActive;" >> "$TARGET_FILE"
+          echo "" >> "$TARGET_FILE"
+          echo "  const ${PICKED_COMP}_$RANDOM({" >> "$TARGET_FILE"
+          echo "    this.id = $RANDOM," >> "$TARGET_FILE"
+          echo "    this.isActive = true," >> "$TARGET_FILE"
+          echo "  });" >> "$TARGET_FILE"
+          echo "}" >> "$TARGET_FILE"
+
+          git config --global user.name "JillySilly"
+          git config --global user.email "ranaebaddiefb@gmail.com"
+
+          MESSAGES=(
+            "feat: add immutable Dart model class for Flutter UI state"
+            "refactor: optimize constructor parameters on Dart models"
+            "fix: adjust default values in Flutter widget state model"
+            "chore: sync Flutter state management model specs"
+          )
+          MSG=${MESSAGES[$RANDOM % ${#MESSAGES[@]}]}
+
+          git add lib/
+          git commit -m "$MSG"
+          git push
