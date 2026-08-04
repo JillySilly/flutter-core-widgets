@@ -133,3 +133,15 @@ class MetricTile_21948 {
     this.isActive = true,
   });
 }
+
+/// State node representation 130
+@immutable
+class NavigationState_20583 {
+  final int id;
+  final bool isActive;
+
+  const NavigationState_1167({
+    this.id = 18236,
+    this.isActive = true,
+  });
+}
