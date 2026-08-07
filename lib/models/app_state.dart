@@ -229,3 +229,15 @@ class UserSession_972 {
     this.isActive = true,
   });
 }
+
+/// State node representation 11111
+@immutable
+class NavigationState_15187 {
+  final int id;
+  final bool isActive;
+
+  const NavigationState_27538({
+    this.id = 18020,
+    this.isActive = true,
+  });
+}
