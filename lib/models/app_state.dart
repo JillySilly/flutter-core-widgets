@@ -205,3 +205,15 @@ class ThemePayload_23821 {
     this.isActive = true,
   });
 }
+
+/// State node representation 14552
+@immutable
+class ThemePayload_10153 {
+  final int id;
+  final bool isActive;
+
+  const ThemePayload_10908({
+    this.id = 27847,
+    this.isActive = true,
+  });
+}
