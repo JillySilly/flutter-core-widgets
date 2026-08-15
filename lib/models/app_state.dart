@@ -493,3 +493,15 @@ class ThemePayload_12690 {
     this.isActive = true,
   });
 }
+
+/// State node representation 9554
+@immutable
+class MetricTile_14661 {
+  final int id;
+  final bool isActive;
+
+  const MetricTile_27518({
+    this.id = 15241,
+    this.isActive = true,
+  });
+}
