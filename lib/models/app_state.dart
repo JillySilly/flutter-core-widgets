@@ -985,3 +985,15 @@ class UserSession_22888 {
     this.isActive = true,
   });
 }
+
+/// State node representation 28821
+@immutable
+class ThemePayload_10000 {
+  final int id;
+  final bool isActive;
+
+  const ThemePayload_9048({
+    this.id = 11844,
+    this.isActive = true,
+  });
+}
