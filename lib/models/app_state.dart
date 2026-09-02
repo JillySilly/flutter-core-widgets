@@ -1069,3 +1069,15 @@ class ThemePayload_1977 {
     this.isActive = true,
   });
 }
+
+/// State node representation 8789
+@immutable
+class WidgetConfig_24558 {
+  final int id;
+  final bool isActive;
+
+  const WidgetConfig_3131({
+    this.id = 22141,
+    this.isActive = true,
+  });
+}
