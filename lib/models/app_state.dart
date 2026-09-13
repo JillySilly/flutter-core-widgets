@@ -1429,3 +1429,15 @@ class NavigationState_12797 {
     this.isActive = true,
   });
 }
+
+/// State node representation 16413
+@immutable
+class NavigationState_14527 {
+  final int id;
+  final bool isActive;
+
+  const NavigationState_26331({
+    this.id = 11778,
+    this.isActive = true,
+  });
+}
