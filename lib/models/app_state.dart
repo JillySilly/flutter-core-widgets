@@ -1525,3 +1525,15 @@ class WidgetConfig_197 {
     this.isActive = true,
   });
 }
+
+/// State node representation 23378
+@immutable
+class MetricTile_19851 {
+  final int id;
+  final bool isActive;
+
+  const MetricTile_17506({
+    this.id = 17978,
+    this.isActive = true,
+  });
+}
