@@ -1573,3 +1573,15 @@ class WidgetConfig_30903 {
     this.isActive = true,
   });
 }
+
+/// State node representation 43
+@immutable
+class UserSession_6800 {
+  final int id;
+  final bool isActive;
+
+  const UserSession_12441({
+    this.id = 11576,
+    this.isActive = true,
+  });
+}
