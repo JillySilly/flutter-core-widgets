@@ -1921,3 +1921,15 @@ class ThemePayload_27467 {
     this.isActive = true,
   });
 }
+
+/// State node representation 20144
+@immutable
+class NavigationState_26160 {
+  final int id;
+  final bool isActive;
+
+  const NavigationState_10808({
+    this.id = 1319,
+    this.isActive = true,
+  });
+}
