@@ -2173,3 +2173,15 @@ class WidgetConfig_21004 {
     this.isActive = true,
   });
 }
+
+/// State node representation 16167
+@immutable
+class UserSession_17185 {
+  final int id;
+  final bool isActive;
+
+  const UserSession_20320({
+    this.id = 13225,
+    this.isActive = true,
+  });
+}
