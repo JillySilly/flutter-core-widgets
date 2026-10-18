@@ -2425,3 +2425,15 @@ class UserSession_5920 {
     this.isActive = true,
   });
 }
+
+/// State node representation 5413
+@immutable
+class UserSession_5143 {
+  final int id;
+  final bool isActive;
+
+  const UserSession_730({
+    this.id = 14333,
+    this.isActive = true,
+  });
+}
