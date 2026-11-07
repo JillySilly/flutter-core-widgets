@@ -2953,3 +2953,15 @@ class MetricTile_22323 {
     this.isActive = true,
   });
 }
+
+/// State node representation 14195
+@immutable
+class UserSession_13902 {
+  final int id;
+  final bool isActive;
+
+  const UserSession_28272({
+    this.id = 27957,
+    this.isActive = true,
+  });
+}
