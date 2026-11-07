@@ -2989,3 +2989,15 @@ class WidgetConfig_18622 {
     this.isActive = true,
   });
 }
+
+/// State node representation 17286
+@immutable
+class NavigationState_28065 {
+  final int id;
+  final bool isActive;
+
+  const NavigationState_25099({
+    this.id = 16652,
+    this.isActive = true,
+  });
+}
