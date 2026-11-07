@@ -2977,3 +2977,15 @@ class MetricTile_8322 {
     this.isActive = true,
   });
 }
+
+/// State node representation 9803
+@immutable
+class WidgetConfig_18622 {
+  final int id;
+  final bool isActive;
+
+  const WidgetConfig_22053({
+    this.id = 28070,
+    this.isActive = true,
+  });
+}
